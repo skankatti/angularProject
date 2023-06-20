@@ -1,0 +1,9 @@
+<p>check-box works!</p>
+
+
+<div *ngFor="let checkbox of checkboxes">
+    <input type="checkbox" [checked]="checkbox.value" (change)="onChange(checkbox)">
+    <label>{{ checkbox.label }}</label>
+  </div>
+  <button type="button" (click)="reseCheckBox()">Reset</button>
+

@@ -1,0 +1,52 @@
+<div class="meeting-scheduler">
+  <h2 style="text-align: center">Meeting Scheduler</h2>
+
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+
+  <div *ngIf="!errorMessage" class="form-container">
+    <div class="form-group">
+      <label for="createdBy">Created By:</label>
+      <input type="text" id="createdByEmail" [(ngModel)]="meeting.createdBy">
+    </div>
+
+    <div class="form-group">
+      <label for="meetingWith">meeting With:</label>
+      <input type="text" id="meetingWith" [(ngModel)]="meeting.meetingWith">
+    </div>
+
+    <div class="form-group">
+      <label for="createdByEmail">Created By Email:</label>
+      <input type="text" id="createdByEmail" [(ngModel)]="meeting.createdByEmail"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="meetingWithEmail">Meeting With Email:</label>
+      <input type="text" id="meetingWithEmail" [(ngModel)]="meeting.meetingWithEmail">
+    </div>
+
+    <div class="form-group">
+      <label for="meetingDate">Meeting Date:</label>
+      <input type="date" id="meetingDate" [(ngModel)]="meeting.meetingDate">
+    </div>
+
+    <div class="form-group">
+      <label for="startTime">Start Time:</label>
+      <input type="time" id="startTime" [(ngModel)]="meeting.startTime">
+    </div>
+
+    <div class="form-group">
+      <label for="endTime">End Time:</label>
+      <input type="time" id="endTime" [(ngModel)]="meeting.endTime">
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <input type="text" id="description" [(ngModel)]="meeting.description">
+    </div>
+
+    <div style="display: flex; justify-content: center">
+      <button (click)="scheduleMeeting()">Schedule Meeting</button>
+    </div>
+  </div>
+</div>
