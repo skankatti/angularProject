@@ -8,13 +8,15 @@ import { MeetingShedulerComponent } from './meeting-sheduler/meeting-sheduler.co
 import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MeetingHomePageComponent } from './meeting-home-page/meeting-home-page.component';
+import { ViewDetailsComponent } from './view-details/view-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CheckBoxComponent,
     MeetingShedulerComponent,
-    MeetingHomePageComponent
+    MeetingHomePageComponent,
+    ViewDetailsComponent
   ],
   imports: [
     BrowserModule,

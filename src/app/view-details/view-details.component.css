@@ -1,0 +1,20 @@
+.meeting-details {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f8f8f8;
+  }
+  
+  .title {
+    margin-top: 0;
+  }
+  
+  .meeting-info p {
+    margin: 5px 0;
+  }
+  
+  .meeting-info strong {
+    font-weight: bold;
+  }
+  

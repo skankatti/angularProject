@@ -1,0 +1,15 @@
+<p>view-details works!</p>
+<h4 class="title">Meeting Details:</h4>
+<div class="meeting-details" *ngFor="let meeting of meetingDetails">
+    <div class="meeting-info">
+      <p><strong>Created By:</strong>Shshank</p>
+      <p><strong>Meeting With:</strong> {{ meeting.meetingWith }}</p>
+      <p><strong>Meeting Date:</strong> {{ meeting.meetingDate }}</p>
+      <p><strong>Start Time:</strong> {{ meeting.startTime }}</p>
+      <p><strong>End Time:</strong> {{ meeting.endTime }}</p>
+      <p><strong>Description:</strong> {{ meeting.description }}</p>
+      <p><strong>Created By Email:</strong> {{ meeting.createdByEmail }}</p>
+      <p><strong>Meeting With Email:</strong> {{ meeting.meetingWithEmail }}</p>
+    </div>
+  </div>
+  
