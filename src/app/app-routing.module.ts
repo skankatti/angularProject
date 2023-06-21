@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: MeetingHomePageComponent },
   { path: 'schedule-meeting', component: MeetingShedulerComponent },
-  {path: 'view-details', component: ViewDetailsComponent },
+  {path: 'view-meetings', component: ViewDetailsComponent },
   
 
 ];

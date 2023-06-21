@@ -22,6 +22,7 @@ export class ViewDetailsComponent implements OnInit{
   }
 meetingDetails:any;
 
+
   ngOnInit(){
     this.http.get<any>(saveDetailsUrl).subscribe(
       (response) => {
