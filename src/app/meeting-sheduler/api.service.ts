@@ -28,18 +28,4 @@ export class APIService {
     );
   }
 
-  meetingDetails(url:any,httpOptions:any){
-    // window.onbeforeunload = () => {
-    this.http.get<any>(url).subscribe(
-      (response) => {
-        // Assign the response data to the 'meetings' property
-        this.meetingData = response.data;
-        console.log('this.meetingData : ', this.meetingData);
-      },
-      (error) => {
-        console.error(error);
-      }
-    );
-  // };
-  }
 }

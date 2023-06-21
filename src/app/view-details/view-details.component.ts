@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { HttpHeaders } from '@angular/common/http';
-import { APIService } from '../meeting-sheduler/api.service';
+import { Component, OnInit } from '@angular/core';
+import { ViewDetailsService } from './view-details.service';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 
 const saveDetailsUrl = 'http://localhost:8080/meeting/get-meeting-details';
@@ -17,20 +17,22 @@ const httpOptions = {
   templateUrl: './view-details.component.html',
   styleUrls: ['./view-details.component.css']
 })
-export class ViewDetailsComponent {
-  constructor(private apiService:APIService){
+export class ViewDetailsComponent implements OnInit{
+  constructor(private http: HttpClient){
   }
-  meetingDetails:any
+meetingDetails:any;
 
-  ngOnInit() {
-
-    // this.callFunctionOnRefresh();
-
-      this.apiService.meetingDetails(saveDetailsUrl,httpOptions);
-      this.meetingDetails=this.apiService.meetingData
-      console.log('this.meetingDetails: ', this.meetingDetails);
+  ngOnInit(){
+    this.http.get<any>(saveDetailsUrl).subscribe(
+      (response) => {
+        // Assign the response data to the 'meetings' property
+        this.meetingDetails = response.data;
+        console.log('Data : ', this.meetingDetails);
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
   }
-
-
-
+  
 }
