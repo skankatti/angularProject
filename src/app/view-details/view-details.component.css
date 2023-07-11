@@ -23,3 +23,13 @@
     font-weight: bold;
   }
   
+
+  .delete-button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+  }
+  
+  .delete-icon {
+    color: red;
+  }

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { MatDialogModule } from '@angular/material/dialog';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CheckBoxComponent } from './check-box/check-box.component';
@@ -11,6 +11,10 @@ import { MeetingHomePageComponent } from './meeting-home-page/meeting-home-page.
 import { ViewDetailsComponent } from './view-details/view-details.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
+import { ConfirmationDialogComponent } from './confirmation-dialog/confirmation-dialog.component';
+import { RenderHtmlpageComponent } from './render-htmlpage/render-htmlpage.component';
+import { CommonModule } from '@angular/common';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +22,9 @@ import { MatIconModule } from '@angular/material/icon';
     CheckBoxComponent,
     MeetingShedulerComponent,
     MeetingHomePageComponent,
-    ViewDetailsComponent
+    ViewDetailsComponent,
+    ConfirmationDialogComponent,
+    RenderHtmlpageComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,7 +32,9 @@ import { MatIconModule } from '@angular/material/icon';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    MatDialogModule,
+    CommonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

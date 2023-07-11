@@ -10,10 +10,11 @@
       <th>Description</th>
       <th>Created By Email</th>
       <th>Meeting With Email</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let meeting of meetingDetails">
+    <tr *ngFor="let meeting of meetingDetails; let i = index">
       <td>{{ meeting.createdBy }}</td>
       <td>{{ meeting.meetingWith }}</td>
       <td>{{ meeting.meetingDate }}</td>
@@ -22,6 +23,7 @@
       <td>{{ meeting.description }}</td>
       <td>{{ meeting.createdByEmail }}</td>
       <td>{{ meeting.meetingWithEmail }}</td>
+      <td><button mat-icon-button color="warn" class="delete-button" (click)="confirmDelete(i)"><mat-icon>delete</mat-icon></button></td>
     </tr>
   </tbody>
 </table>
